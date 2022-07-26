@@ -1,0 +1,58 @@
+@import '../../ontario-design-system/styles/sass/variables-import';
+
+.site__spinner-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: $ontario-colour-button-tertiary--hover;
+
+    &.site__spinner-block-mode {
+        position: relative;
+        background-color: $ontario-colour-white;
+    }
+
+    .site__spinner {
+        .site__loader {
+            display: inline-block;
+            border: 10px solid $ontario-colour-button-tertiary--active;
+            border-radius: 50%;
+            border-top: 10px solid #51aaf0;
+            width: 30px;
+            height: 30px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+
+            &.small {
+                width: 25px;
+                height: 25px;
+                border-width: 7px;
+            }
+        }
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
