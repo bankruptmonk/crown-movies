@@ -4,16 +4,16 @@ import './footer.styles.scss';
 
 const Footer = (props) => {
     return (
-        <footer class="ontario-footer ontario-footer--default">
-            <div class="ontario-row">
-                <div class="ontario-columns ontario-small-12">
-                    <ul class="ontario-footer__links-container ontario-footer__links-container--inline">
-                        <li><a class="ontario-footer__link" href="https://www.ontario.ca/page/accessibility">Accessibility</a></li>
-                        <li><a class="ontario-footer__link" href="https://www.ontario.ca/page/privacy-statement">Privacy</a></li>
-                        <li><a class="ontario-footer__link" href="https://www.ontario.ca/feedback/contact-us">Contact us</a></li>
+        <footer className="ontario-footer ontario-footer--default">
+            <div className="ontario-row">
+                <div className="ontario-columns ontario-small-12">
+                    <ul className="ontario-footer__links-container ontario-footer__links-container--inline">
+                        <li><a className="ontario-footer__link" href="https://www.ontario.ca/page/accessibility">Accessibility</a></li>
+                        <li><a className="ontario-footer__link" href="https://www.ontario.ca/page/privacy-statement">Privacy</a></li>
+                        <li><a className="ontario-footer__link" href="https://www.ontario.ca/feedback/contact-us">Contact us</a></li>
                     </ul>
-                    <div class="ontario-footer__copyright">
-                        <a class="ontario-footer__link" href="https://www.ontario.ca/page/copyright-information-c-queens-printer-ontario">&copy; Queen’s Printer for {process.env.REACT_APP_COMPANY_NAME}, <span class="ontario-nbsp">2012&ndash;21</span></a>
+                    <div className="ontario-footer__copyright">
+                        <a className="ontario-footer__link" href="https://www.ontario.ca/page/copyright-information-c-queens-printer-ontario">&copy; Queen’s Printer for {process.env.REACT_APP_COMPANY_NAME}, <span className="ontario-nbsp">2012&ndash;21</span></a>
                     </div>
                 </div>
             </div>
