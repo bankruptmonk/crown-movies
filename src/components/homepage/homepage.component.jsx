@@ -27,7 +27,7 @@ const HomePage = () => {
 
     const handleSearchKeyUp = (event) => {
         event.preventDefault();
-        
+
         if (event.keyCode === 13) {
             handleSearch();
         }
@@ -35,10 +35,10 @@ const HomePage = () => {
 
     useEffect(() => {
 
-        if (loading === false) {
-            handleSearch();
-        }
+        setPage(1);
+        handleSearch();
 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
