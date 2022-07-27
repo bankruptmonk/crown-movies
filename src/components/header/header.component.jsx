@@ -92,6 +92,7 @@ const Header = (props) => {
                     <a href="https://www.ontario.ca/page/government-ontario"
                         title='Go To www.ontario.ca'
                         target={'_blank'} 
+                        hout rel="noreferrer"
                         className='header-link'>
                         <div className='logo'>
                             <Logo title='company logo'/>
