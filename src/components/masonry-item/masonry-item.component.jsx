@@ -12,6 +12,7 @@ const MasonryItem = (props) => {
             <img className="masonry-image"
                 src={`${item.Poster}`}
                 alt={`Poster for ${item.Title}`}
+                loading="lazy"
             />
         </div>
     )
