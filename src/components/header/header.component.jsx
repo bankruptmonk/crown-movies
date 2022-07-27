@@ -34,9 +34,11 @@ const Header = (props) => {
                 <section className="ontario-application-subheader application-subheader">
                     <div className="ontario-row">
                         <div className="ontario-columns ontario-small-12 ontario-application-subheader__container">
-                            <p className="ontario-application-subheader__heading">
+                            {/* <p className="ontario-application-subheader__heading">
                                 <Link to="/" title='Home'>{process.env.REACT_APP_APPLICATION_NAME}</Link>
-                            </p>
+                            </p> */}
+
+                            <h2 className='ontario-application-subheader__heading'><Link to="/" title='Home'>{process.env.REACT_APP_APPLICATION_NAME}</Link></h2>
 
                             <div className="ontario-application-subheader__menu-container">
                                 <ul className="ontario-application-subheader__menu">
