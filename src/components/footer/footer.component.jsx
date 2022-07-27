@@ -22,6 +22,13 @@ const Footer = (props) => {
                     Build Number: {process.env.REACT_APP_BUILD_NUMBER}
                 </div>
             </div>
+            <div className='ontario-row build-number-row'>
+                <div className='ontario-columns ontario-small-12'>
+                    Source Code: <a className='ontario-footer__link' href="https://github.com/bankruptmonk/crown-movies" target={'_blank'} rel="noreferrer">
+                        https://github.com/bankruptmonk/crown-movies
+                    </a>
+                </div>
+            </div>
         </footer>
     );
 }
