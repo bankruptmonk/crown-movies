@@ -31,7 +31,7 @@ const HomePage = () => {
         if (event.keyCode === 13) {
             handleSearch();
         }
-    }
+    } 
 
     useEffect(() => {
 
