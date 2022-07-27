@@ -17,6 +17,11 @@ const Footer = (props) => {
                     </div>
                 </div>
             </div>
+            <div className='ontario-row build-number-row'>
+                <div className='ontario-columns ontario-small-12'>
+                    Build Number: {process.env.REACT_APP_BUILD_NUMBER}
+                </div>
+            </div>
         </footer>
     );
 }
