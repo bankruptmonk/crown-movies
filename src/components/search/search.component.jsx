@@ -11,7 +11,7 @@ const Search = (props) => {
         <div className="ontario-row">
             <div className="ontario-columns ontario-large-8 ontario-medium-8 ontario-small-12">
                 
-                    <label className="sr-only" for="txtSearch">Search Terms</label>
+                    <label className="sr-only" htmlFor="txtSearch">Search Terms</label>
                     <input className="ontario-input" type="text" id="txtSearch"
                         onKeyUp={handleEnter} onChange={handleChange} value={value} />
                 
