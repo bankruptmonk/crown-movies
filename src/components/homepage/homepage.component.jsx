@@ -37,12 +37,7 @@ const HomePage = () => {
                 else {
                     items = response.data.Search;
 
-                    const config = {
-                        headers: {
-                            user: localStorage.getItem('uguid')
-                        }
-                    }
-                    axios.get(`${process.env.REACT_APP_FUNCTION_APP}item`, config)
+                    axios.get(`${process.env.REACT_APP_FUNCTION_APP}item`)
                         .then(response => {
                             items = [...items, ...response.data];
                         })

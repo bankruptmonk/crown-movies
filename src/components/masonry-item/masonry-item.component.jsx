@@ -23,13 +23,13 @@ const MasonryItem = (props) => {
                 if (response.status === 200) {
                     window.location.reload();
                 } else {
-                    
+                    setDeleting(false)
                 }
             })
             .catch((error) => {
                 console.error(error);
             })
-            .finally(() => { setDeleting(false)});
+            .finally(() => { });
     }
 
     return (
