@@ -5,7 +5,9 @@ import Loading from '../loading/loading.component';
 
 import Search from '../search/search.component';
 import CustomMasonry from '../masonry/masonry.component';
-import Error from '../error/error.component';
+import Warning from '../warning/warning.component';
+
+import { v4 as uuid } from 'uuid';
 
 const HomePage = () => {
     const [items, setItems] = useState([]);
@@ -19,9 +21,10 @@ const HomePage = () => {
         setLoading(true);
         setErrors([]);
 
+        let items = [];
+
         axios.get(`${process.env.REACT_APP_API_URL}${term}&apikey=${process.env.REACT_APP_API_KEY}&page=${page}`)
             .then(response => {
-                console.log(response); 
 
                 if (response.data.Response === "False") {
                     setItems([]);
@@ -32,11 +35,26 @@ const HomePage = () => {
                     setErrors(e);
                 }
                 else {
-                    setItems(response.data.Search)
+                    items = response.data.Search;
+
+                    const config = {
+                        headers: {
+                            user: localStorage.getItem('uguid')
+                        }
+                    }
+                    axios.get(`${process.env.REACT_APP_FUNCTION_APP}item`, config)
+                        .then(response => {
+                            items = [...items, ...response.data];
+                        })
+                        .catch((error) => console.error(error))
+                        .finally(() => { setItems(items); setLoading(false)});
+                            
                 }
             })
             .catch((error) => console.error(error))
-            .finally(() => { setLoading(false)});
+            .finally(() => { });
+
+        
     }
 
     const handleSearchClick = () => {
@@ -53,6 +71,10 @@ const HomePage = () => {
 
     useEffect(() => {
 
+        const uguid = localStorage.getItem("uguid");
+        if (!uguid)
+            localStorage.setItem('uguid', uuid());
+
         setPage(1);
         handleSearch();
 
@@ -65,7 +87,7 @@ const HomePage = () => {
             <h1>Home</h1>
             <Search handleEnter={handleSearchKeyUp} handleChange={(e) => setTerm(e.target.value)} 
                 handleClick={handleSearchClick} value={term} />
-            <Error errors={errors} />
+            <Warning errors={errors} />
             <CustomMasonry items={items} />
         </div>
         
