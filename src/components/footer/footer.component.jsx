@@ -24,8 +24,15 @@ const Footer = (props) => {
             </div>
             <div className='ontario-row build-number-row'>
                 <div className='ontario-columns ontario-small-12'>
-                    Source Code: <a className='ontario-footer__link' href="https://github.com/bankruptmonk/crown-movies" target={'_blank'} rel="noreferrer">
+                    Front End Code: <a className='ontario-footer__link' href="https://github.com/bankruptmonk/crown-movies" target={'_blank'} rel="noreferrer">
                         https://github.com/bankruptmonk/crown-movies
+                    </a>
+                </div>
+            </div>
+            <div className='ontario-row build-number-row'>
+                <div className='ontario-columns ontario-small-12'>
+                    Back End Code: <a className='ontario-footer__link' href="https://github.com/bankruptmonk/crown-movies" target={'_blank'} rel="noreferrer">
+                        https://github.com/bankruptmonk/crown-movies-api
                     </a>
                 </div>
             </div>
