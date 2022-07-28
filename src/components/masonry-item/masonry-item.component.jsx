@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Loading from '../loading/loading.component';
-import { useNavigate } from 'react-router-dom';
 
 import './masonry-item.styles.scss';
 
@@ -8,7 +7,6 @@ import axios from 'axios';
 
 const MasonryItem = (props) => {
     const [deleting, setDeleting] = useState(false);
-    const navigate = useNavigate();
 
     const { item } = props;
     const uguid = localStorage.getItem("uguid");
