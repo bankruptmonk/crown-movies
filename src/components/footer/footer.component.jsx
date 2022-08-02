@@ -36,6 +36,13 @@ const Footer = (props) => {
                     </a>
                 </div>
             </div>
+            <div className='ontario-row build-number-row'>
+                <div className='ontario-columns ontario-small-12'>
+                    Powerapp Code: <a className='ontario-footer__link' href="https://github.com/bankruptmonk/crown-movies-powerapp" target={'_blank'} rel="noreferrer">
+                        https://github.com/bankruptmonk/crown-movies-powerapp
+                    </a>
+                </div>
+            </div>
         </footer>
     );
 }

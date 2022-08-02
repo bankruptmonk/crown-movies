@@ -35,7 +35,7 @@ const MasonryItem = (props) => {
     return (
         <div>
             { deleting && <Loading /> }
-            <div className="masonry-title">{item.Title} ({item.Year})</div>
+            <div className="masonry-title">{item.Title} ({item.Year}) - ({item.Type})</div>
             <img className="masonry-image"
                 src={`${item.Poster}`}
                 alt={`Poster for ${item.Title}`}
